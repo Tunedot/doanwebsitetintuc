@@ -1,0 +1,3 @@
+@extends('layout')@section('c')@include('admin.nav')<a class="btn btn-success mb-2" href="/admin/articles/create">+ Thêm bài viết</a>
+<table class="table"><tr><th>Tiêu đề</th><th>Chuyên mục</th><th>Tác giả</th><th>Trạng thái</th><th>Lượt xem</th><th></th></tr>
+@foreach($rows as $a)<tr><td>{{$a->title}}</td><td>{{$a->category->name}}</td><td>{{$a->user->name}}</td><td>{{$a->status}}</td><td>{{$a->views}}</td><td class="d-flex gap-1"><a class="btn btn-sm btn-primary" href="/admin/articles/{{$a->id}}/edit">Sửa</a><form method="post" action="/admin/articles/{{$a->id}}" onsubmit="return confirm('Xóa bài viết?')">@csrf @method('DELETE')<button class="btn btn-sm btn-danger">Xóa</button></form></td></tr>@endforeach</table>{{$rows->links('pagination::bootstrap-5')}}@endsection

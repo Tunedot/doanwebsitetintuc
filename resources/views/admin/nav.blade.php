@@ -1,0 +1,1 @@
+<div class="mb-3"><a href="/admin/articles">Bài viết</a>@if(auth()->user()->role=='admin') | <a href="/admin/categories">Chuyên mục</a> | <a href="/admin/users">Người dùng</a> | <a href="/admin/comments">Bình luận</a> | <a href="/admin/contacts">Liên hệ</a>@endif</div>

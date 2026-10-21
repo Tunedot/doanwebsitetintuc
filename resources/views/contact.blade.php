@@ -1,0 +1,2 @@
+@extends('layout')@section('c')<h3>Liên hệ</h3><form method="post" style="max-width:500px">@csrf
+<input name="name" class="form-control mb-2" placeholder="Họ tên" required><input name="email" type="email" class="form-control mb-2" placeholder="Email" required><input name="subject" class="form-control mb-2" placeholder="Chủ đề" required><textarea name="message" class="form-control mb-2" placeholder="Nội dung" required></textarea><button class="btn btn-primary">Gửi</button></form>@endsection
